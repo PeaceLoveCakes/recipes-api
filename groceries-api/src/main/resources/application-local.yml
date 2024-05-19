@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: 'groceries-api'
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/recipes-db
+    username: postgres
+    password: postgres
+  #tmp
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+#tmp
