@@ -4,7 +4,93 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4886255-42e2-41ff-a66a-a60f5f315288" name="Changes" comment="" />
+    <list default="true" id="e4886255-42e2-41ff-a66a-a60f5f315288" name="Changes" comment="init-commit">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/goods-collector.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/groceries-api.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/magnit-api.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/magnit-get-goods.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/recepies-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/recipes-api.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/CollectGoodsSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/Good.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/GoodsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/MeasurementUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/Offer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/PageableResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/Pagination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/kafka/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/kafka/KafkaProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/service/MagnitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-collector/src/main/resources/application-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/category/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/category/CategoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/goods/Pagination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/goods/request/GoodsRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/goods/request/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/goods/response/Good.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/goods/response/GoodsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/goods/response/Offer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/HeadersConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/controller/GoodsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/CategoriesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/GoodsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/category/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/category/CategoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/GoodsRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/Pagination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/requestJSON.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/Good.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/GoodsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/Offer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/Pagination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/GoodsSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/DTO/PageableResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/DTO/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/ProductsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/kafka/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/kafka/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/model/MeasurementUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/resources/application-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/service/ProductServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/test/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groceries-api.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groceries-api.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/recipes-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/recipes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/lombok.config" beforeDir="false" afterPath="$PROJECT_DIR$/goods-collector/lombok.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/java/ru/klingenberg/groceriesapi/DTO/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/java/ru/klingenberg/groceriesapi/GroceriesApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/RecipesApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/java/ru/klingenberg/groceriesapi/controller/GroceriesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/java/ru/klingenberg/groceriesapi/db/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/java/ru/klingenberg/groceriesapi/db/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/java/ru/klingenberg/groceriesapi/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-get-goods/src/main/resources/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groceries-api/src/test/java/ru/klingenberg/groceriesapi/GroceriesApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/RecipesApiApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,14 +100,29 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-    <projectState path="$PROJECT_DIR$/groceries-api">
+    <projectState path="$PROJECT_DIR$/goods-collector">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/magnit-api">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/magnit-get-goods">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/recipes-api">
       <ProjectState />
     </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/groceries-api">
+        <task path="$PROJECT_DIR$/recipes-api">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/magnit-get-goods">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/goods-collector">
           <activation />
         </task>
         <projects_view>
@@ -33,7 +134,22 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,32 +164,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/Projects/recipes-api",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.6816092",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/recipes/recipes-api&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6816092&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.klingenberg.recipesapi.model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projects\recepies-api" />
+      <recent name="E:\Projects\recipes-api\recipes-api" />
+      <recent name="E:\Projects\recipes-api\goods-collector" />
+      <recent name="E:\Projects\recipes-api\goods-collector\src\main\java\ru\klingenberg\goods_collector\DTO" />
+      <recent name="E:\Projects\recipes-api\magnit-api" />
+      <recent name="E:\Projects\recipes-api\magnit-api\src\main\java\ru\klingenberg\magnit_api" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\recipes-api\magnit-api\src\main\java\ru\klingenberg\magnit_api\DTO\Goods\request" />
+      <recent name="E:\Projects\recipes-api\magnit-get-goods\src\main\java\ru\klingenberg\magnitgetgoods\DTO\request\Goods" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.klingenberg.recipesapi.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.klingenberg.goods_collector.DTO" />
+      <recent name="ru.klingenberg.goods_collector.db.repository" />
+      <recent name="ru.klingenberg.magnitgetgoods" />
+      <recent name="ru.klingenberg.magnitgetgoods.DTO" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GroceriesApiApplication">
-    <configuration name="GroceriesApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.klingenberg.groceriesapi.GroceriesApiApplication" />
-      <module name="groceries-api.main" />
-      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.GoodsCollectorApplication">
+    <configuration name="GoodsCollectorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.klingenberg.goods_collector.GoodsCollectorApplication" />
+      <module name="goods-collector.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.klingenberg.groceriesapi.*" />
+          <option name="PATTERN" value="ru.klingenberg.goods_collector.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,37 +230,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groceries-api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/groceries-api" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+    <configuration name="MagnitApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.klingenberg.magnit_api.MagnitApiApplication" />
+      <module name="magnit-api.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.klingenberg.magnit_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecipesApiApplication" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ru.klingenberg.resipesapi.RecipesApiApplication" />
+      <module name="recipes-api.main" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.klingenberg.resipesapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="goods-collector: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="goods-collector/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="goods-collector.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="goods-collector/docker-compose.yml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.GroceriesApiApplication" />
-      <item itemvalue="Gradle.groceries-api [build]" />
+      <item itemvalue="Application.RecipesApiApplication" />
+      <item itemvalue="Application.GoodsCollectorApplication" />
+      <item itemvalue="Application.MagnitApiApplication" />
+      <item itemvalue="Docker.goods-collector.kafka: Compose Deployment" />
+      <item itemvalue="Docker.goods-collector: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.groceries-api [build]" />
-        <item itemvalue="Application.GroceriesApiApplication" />
+        <item itemvalue="Application.MagnitApiApplication" />
+        <item itemvalue="Application.RecipesApiApplication" />
+        <item itemvalue="Docker.goods-collector: Compose Deployment" />
+        <item itemvalue="Docker.goods-collector.kafka: Compose Deployment" />
+        <item itemvalue="Application.GoodsCollectorApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +310,15 @@
       <option name="presentableId" value="Default" />
       <updated>1715601123165</updated>
     </task>
+    <task id="LOCAL-00001" summary="init-commit">
+      <option name="closed" value="true" />
+      <created>1716123652929</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716123652929</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,10 +326,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init-commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init-commit" />
   </component>
 </project>

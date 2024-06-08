@@ -1,6 +1,5 @@
 version: '3'
 services:
-
   db-recipes:
     container_name: ${POSTGRES_HOST}
     image: postgres:16
@@ -11,9 +10,9 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
-#  groceries-api:
+#  recipes-api:
 #    build:
-#      context: ./groceries-api
+#      context: ./recipes-api
 #      dockerfile: /Dockerfile
 #    ports:
 #      - "8080:8080"

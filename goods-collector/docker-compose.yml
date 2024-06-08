@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  kafka:
+    image: apache/kafka:3.7.0
+    restart: always
+    ports:
+      - 29092:29092
+      - 9092:9092
