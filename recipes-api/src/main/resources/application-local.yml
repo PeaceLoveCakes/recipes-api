@@ -16,5 +16,9 @@ spring:
               packages: "*"
   jpa:
     hibernate:
-      ddl-auto: 'create'
-    show-sql: false
+      ddl-auto: 'update'
+    show-sql: true
+
+logging:
+  level:
+    sql: DEBUG

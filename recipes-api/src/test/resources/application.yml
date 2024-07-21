@@ -1,9 +1,6 @@
 spring:
   application:
     name: 'groceries-api'
-  datasource:
-    url: jdbc:h2:mem:4f867c2f-da61-432b-9e6c-ca7c16cc7709;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false
-    username: sa
   jpa:
     show-sql: true
     hibernate:

@@ -1,15 +1,19 @@
-package ru.klingenberg.resipesapi.DTO;
+package ru.klingenberg.products_api.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.Getter;
 import lombok.Setter;
-import ru.klingenberg.resipesapi.model.MeasurementUnit;
+import lombok.ToString;
+import ru.klingenberg.products_api.db.entity.Product;
 
 @Getter
 @Setter
+@ToString
 public class ProductDto {
+
+    private String id;
 
     @NotBlank(message = "name required")
     private String name;
@@ -40,5 +44,23 @@ public class ProductDto {
             default -> MeasurementUnit.unit;
         };
         return this;
+    }
+
+    public static ProductDto from(Product product){
+        return new ProductDto()
+                .setId(product.getId())
+                .setName(product.getName())
+//                .setPrice(product.getPrice())
+//                .setAmount(product.getAmount())
+                .setMeasurementUnit(product.getMeasurementUnit());
+    }
+
+    public void normalizeAmount() {
+        Double amount = this.getAmount();
+        if (amount != 1d) {
+            Double multiply = 1 / amount;
+            this.setAmount(amount * multiply);
+            this.setPrice(Math.floor(this.getPrice() * multiply * 100) / 100);
+        }
     }
 }

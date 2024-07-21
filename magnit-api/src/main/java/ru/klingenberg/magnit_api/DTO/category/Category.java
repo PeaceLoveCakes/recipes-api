@@ -13,11 +13,4 @@ public class Category {
     private String name;
     private List<Category> children = new ArrayList<>();
 
-    @Override
-    public String toString(){
-        return id + ": " + name.trim() +
-                (children.isEmpty() ? "; " : " { \n" +
-                children.stream().map(category -> "\t" + category.toString() + "\n").collect(Collectors.joining())
-                + "}");
-    }
 }

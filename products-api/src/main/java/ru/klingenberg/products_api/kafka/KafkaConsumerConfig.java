@@ -1,4 +1,4 @@
-package ru.klingenberg.resipesapi.kafka;
+package ru.klingenberg.products_api.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -9,7 +9,7 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
-import ru.klingenberg.resipesapi.DTO.ProductDto;
+import ru.klingenberg.products_api.dto.ProductDto;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -2,20 +2,16 @@ package ru.klingenberg.magnit_api.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-import ru.klingenberg.magnit_api.DTO.category.Category;
-import ru.klingenberg.magnit_api.DTO.goods.request.GoodsRequest;
 import ru.klingenberg.magnit_api.DTO.goods.Pagination;
+import ru.klingenberg.magnit_api.DTO.goods.request.GoodsRequest;
 import ru.klingenberg.magnit_api.DTO.goods.response.GoodsResponse;
 
-import java.util.*;
+import java.util.Map;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

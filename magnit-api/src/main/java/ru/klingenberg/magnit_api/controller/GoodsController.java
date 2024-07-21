@@ -54,4 +54,5 @@ public class GoodsController {
                 .toEntity(new ParameterizedTypeReference<List<Category>>() {
                 }).getBody();
     }
+
 }

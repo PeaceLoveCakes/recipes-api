@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db-recipes:
+    container_name: db-products
+    image: postgres:16
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: products-db

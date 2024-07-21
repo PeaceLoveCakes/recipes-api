@@ -1,10 +1,10 @@
-package ru.klingenberg.resipesapi.kafka;
+package ru.klingenberg.products_api.kafka;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
-import ru.klingenberg.resipesapi.DTO.ProductDto;
-import ru.klingenberg.resipesapi.service.ProductService;
+import ru.klingenberg.products_api.dto.ProductDto;
+import ru.klingenberg.products_api.service.ProductService;
 
 @Service
 @RequiredArgsConstructor

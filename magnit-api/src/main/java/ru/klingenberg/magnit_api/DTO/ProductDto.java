@@ -10,6 +10,10 @@ import lombok.ToString;
 @ToString
 public class ProductDto {
 
+    private String inShopId;
+
+    private String shop;
+
     private String name;
 
     private Double price;

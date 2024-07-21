@@ -34,8 +34,7 @@ public class CategoriesService {
                 .build()
                 .get()
                 .retrieve()
-                .toEntity(new ParameterizedTypeReference<List<Category>>() {
-                });
+                .toEntity(new ParameterizedTypeReference<List<Category>>() {});
         return Objects.requireNonNull(categoryResponseEntity.getBody())
                 .stream()
                 .filter(category -> names

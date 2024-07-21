@@ -1,0 +1,22 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: 'recipes-api'
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/products-db
+    username: postgres
+    password: postgres
+  kafka:
+    consumer:
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+  jpa:
+    hibernate:
+      ddl-auto: 'create'
+    show-sql: true

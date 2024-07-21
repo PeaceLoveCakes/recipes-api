@@ -1,4 +1,4 @@
-package ru.klingenberg.magnit_api;
+package ru.klingenberg.magnit_api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,0 +1,18 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: "magnit-api"
+  kafka:
+    producer:
+      properties:
+        spring:
+          json:
+            add:
+              type:
+                headers: false
+
+magnit:
+  url: "https://web-gateway.middle-api.magnit.ru"
+
+cron: "0 0 12 * * ?"

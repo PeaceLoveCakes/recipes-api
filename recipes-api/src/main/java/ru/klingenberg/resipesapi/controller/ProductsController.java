@@ -1,11 +1,12 @@
 package ru.klingenberg.resipesapi.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-import ru.klingenberg.resipesapi.DTO.PageableResponse;
-import ru.klingenberg.resipesapi.DTO.ProductDto;
+import ru.klingenberg.resipesapi.dto.PageableResponse;
+import ru.klingenberg.resipesapi.dto.ProductDto;
 import ru.klingenberg.resipesapi.db.entity.Product;
 import ru.klingenberg.resipesapi.service.ProductService;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
+@Tag(name="Ingredients")
 public class ProductsController {
 
     private final ProductService productService;
@@ -28,8 +30,8 @@ public class ProductsController {
         return productService.save(products);
     }
 
-    @GetMapping("/get/{id}")
-    public Product getById(@PathVariable Long id){
+    @GetMapping("/{id}")
+    public Product getById(@PathVariable String id){
         return productService.findById(id).orElse(null);
     }
 
