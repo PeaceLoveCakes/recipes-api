@@ -2,15 +2,12 @@ package ru.klingenberg.magnit_api.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
-import ru.klingenberg.magnit_api.DTO.PageableResponse;
+import ru.klingenberg.magnit_api.DTO.ShopProducts;
 import ru.klingenberg.magnit_api.DTO.ProductDto;
 import ru.klingenberg.magnit_api.DTO.goods.response.Good;
 import ru.klingenberg.magnit_api.DTO.goods.response.GoodsResponse;
 
-import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,14 +20,11 @@ public class ProductsService {
 
     private String shop = "Магнит";
 
-    public PageableResponse<ProductDto> PageableResponseFromGoodsResponse(GoodsResponse goodsResponse){
-        return new PageableResponse<ProductDto>()
+    public ShopProducts shopProductsFromGoodsResponse(GoodsResponse goodsResponse){
+        return new ShopProducts()
                 .setElements(goodsResponse.getGoods().stream().map(this::productFromGood).toList())
-                .setPageSize(goodsResponse.getPagination().getSize())
-                .setPageNo(goodsResponse.getPagination().getNumber())
-                .setTotalElements(goodsResponse.getPagination().getTotalCount())
-                .setHasMore(goodsResponse.getPagination().isHasMore())
-                .setTotalPages(goodsResponse.getPagination().getTotalPages());
+                .setShopName(shop)
+                .setHasMore(goodsResponse.getPagination().isHasMore());
     }
 
     private ProductDto productFromGood(Good good) {
@@ -57,7 +51,7 @@ public class ProductsService {
         return new ProductDto()
                 .setInShopId(good.getId())
                 .setPrice(Double.valueOf(good.getOffers().get(0).getPrice().replace(",", ".")))
-                .setShop(shop)
+                .setShopName(shop)
                 .setAmount(amount)
                 .setName(name.trim())
                 .setMeasurementUnit(measurementUnit);

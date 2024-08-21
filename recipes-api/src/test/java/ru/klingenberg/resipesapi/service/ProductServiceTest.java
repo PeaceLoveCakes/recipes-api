@@ -1,12 +1,6 @@
 package ru.klingenberg.resipesapi.service;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
-import ru.klingenberg.resipesapi.dto.ProductDto;
-import ru.klingenberg.resipesapi.db.entity.Product;
-import ru.klingenberg.resipesapi.model.MeasurementUnit;
 
 @SpringBootTest
 class ProductServiceTest {

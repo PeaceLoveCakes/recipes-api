@@ -1,6 +1,6 @@
 spring:
   application:
-    name: 'groceries-api'
+    name: 'recipes-api'
   jpa:
     show-sql: true
     hibernate:

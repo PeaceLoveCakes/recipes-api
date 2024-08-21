@@ -1,4 +1,18 @@
+server:
+  port: 8080
 spring:
   application:
     name: "prices-api"
-
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+urls:
+  recipes-api: "recipes-api:8080"
+  products-api: "products-api:8081"

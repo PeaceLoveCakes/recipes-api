@@ -3,17 +3,12 @@ package ru.klingenberg.products_api.db.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import ru.klingenberg.products_api.dto.MeasurementUnit;
 import ru.klingenberg.products_api.dto.ProductDto;
 
-
-import java.time.LocalDateTime;
-
-@Entity
 @Getter
 @Setter
+@Entity
 @Table(name = "product",
         uniqueConstraints = { @UniqueConstraint(columnNames =
                 { "shop_id", "inShopId" }) })
@@ -22,14 +17,6 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
-
-    @CreatedDate
-    @Column(name = "created_date")
-    private LocalDateTime createdDate;
-
-    @LastModifiedDate
-    @Column(name = "last_modified_date")
-    private LocalDateTime lastModifiedDate;
 
     private String name;
 
@@ -50,7 +37,8 @@ public class Product {
                 .setName(productDto.getName())
                 .setPrice(productDto.getPrice())
                 .setAmount(productDto.getAmount())
-                .setMeasurementUnit(productDto.getMeasurementUnit());
+                .setMeasurementUnit(productDto.getMeasurementUnit())
+                .setInShopId(productDto.getInShopId());
     }
 
     public void normalizeAmount() {

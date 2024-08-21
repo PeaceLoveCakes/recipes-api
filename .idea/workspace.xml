@@ -4,63 +4,137 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4886255-42e2-41ff-a66a-a60f5f315288" name="Changes" comment="goods-collector">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/RecipesApiApplication.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/PageableResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/kafka/KafkaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/kafka/KafkaProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/schedule/CollectGoodsSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/ProductsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/magnit-api/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/lombok.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/controller/ProductsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/entity/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/MeasurementUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/PageableResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/config/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/RecipesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Recipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/RecipeProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Step.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/RecipeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeDtoGet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeDtoPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/StepDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/RecipeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/RecipesApiApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/service/RecipeServiceTest.java" afterDir="false" />
+    <list default="true" id="e4886255-42e2-41ff-a66a-a60f5f315288" name="Changes" comment="Full project redesign">
+      <change afterPath="$PROJECT_DIR$/magnit-api/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/controller/IngredientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/controller/RecipeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/db/entity/IngredientProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/db/repository/IngredientProductsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/IngredientDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/MeasurementUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/RecipeDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/StepDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/service/IngredientProductsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/service/RecipeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prices-api/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-api/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/repository/ShopRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/ShopProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/service/ShopService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-api/src/test/java/ru/klingenberg/products_api/controller/ProductsControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products-api/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/IngredientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/RecipeIngredientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/lombok.config" beforeDir="false" afterPath="$PROJECT_DIR$/prices-api/lombok.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/CollectGoodsSchedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/Good.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/GoodsResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/MeasurementUnit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/Offer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/PageableResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/Pagination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/DTO/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/RecipeIngredientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/GoodsCollectorApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/kafka/KafkaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/kafka/KafkaProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/java/ru/klingenberg/goods_collector/service/MagnitService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/resources/application-local.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-collector/src/test/java/ru/klingenberg/goods_collector/GoodsCollectorApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/magnit-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/PageableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/ShopProducts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/DTO/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/HeadersConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/config/HeadersConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/kafka/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/kafka/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/kafka/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/schedule/CollectGoodsSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/schedule/CollectGoodsSchedule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/CategoriesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/CategoriesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/ProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/java/ru/klingenberg/magnit_api/service/ProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-api/src/test/java/ru/klingenberg/magnit_api/MagnitApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/magnit-api/src/test/java/ru/klingenberg/magnit_api/MagnitApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/lombok.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/category/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/category/CategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/GoodsRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/Pagination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/request/goods/requestJSON.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/Good.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/GoodsResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/Offer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/DTO/response/Pagination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/GoodsSchedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/java/ru/klingenberg/magnitgetgoods/MagnitGetGoodsApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/resources/application-local.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/prices-api/src/main/resources/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/magnit-get-goods/src/test/java/ru/klingenberg/magnitgetgoods/MagnitGetGoodsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prices-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/prices-api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prices-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/prices-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prices-api/src/test/java/ru/klingenberg/prices_api/PricesApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/prices-api/src/test/java/ru/klingenberg/prices_api/PricesApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/ProductsApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/ProductsApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/controller/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/entity/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/entity/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/db/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/PageableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/PageableResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/kafka/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/kafka/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/kafka/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/kafka/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/resources/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products-api/src/test/java/ru/klingenberg/products_api/ProductsApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/test/java/ru/klingenberg/products_api/ProductsApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipes-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/DTO/PageableResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/PageableResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/DTO/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/kafka/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/kafka/KafkaConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/kafka/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/products-api/src/main/java/ru/klingenberg/products_api/kafka/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/IngredientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/RecipesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/controller/RecipesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/RecipeProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/RecipeIngredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Step.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/entity/Step.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/RecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/db/repository/RecipeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/IngredientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeDtoGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeDtoPost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/RecipeIngredientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/model/MeasurementUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/dto/MeasurementUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/IngredientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/java/ru/klingenberg/resipesapi/service/RecipeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipes-api/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/resources/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/service/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/service/RecipeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/test/java/ru/klingenberg/resipesapi/service/RecipeServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipes-api/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/recipes-api/src/test/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +180,15 @@
         <task path="$PROJECT_DIR$/goods-collector">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/magnit-api">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/prices-api">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/products-api">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -119,6 +202,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
@@ -148,54 +232,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SpringAuditingDialog.CreatedDateKey": "true",
-    "SpringAuditingDialog.LastModifiedDateKey": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "E:/Projects/recipes/products-api/src/main/java/ru/klingenberg/products_api",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.6816092",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SpringAuditingDialog.CreatedDateKey&quot;: &quot;true&quot;,
+    &quot;SpringAuditingDialog.LastModifiedDateKey&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/recipes/recipes-api&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6816092&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.klingenberg.prices_api.service" />
+      <recent name="ru.klingenberg.prices_api.dto" />
+      <recent name="ru.klingenberg.products_api.db.repository" />
       <recent name="ru.klingenberg.resipesapi.dto" />
       <recent name="ru.klingenberg.resipesapi.DTO.recipe" />
-      <recent name="ru.klingenberg.recipesapi.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projects\recipes\products-api\src\main\java\ru\klingenberg\products_api" />
-      <recent name="E:\Projects\recipes\magnit-api\src\main\resources" />
-      <recent name="E:\Projects\recipes\magnit-api\src\main\java\ru\klingenberg\magnit_api" />
-      <recent name="E:\Projects\recipes\goods-api\src\main\java\ru\klingenberg\goods_api" />
-      <recent name="E:\Projects\recipes\prices-api\src\main\java\ru\klingenberg\prices_api" />
+      <recent name="E:\Projects\recipes\recipes-api" />
+      <recent name="E:\Projects\recipes\prices-api\src\test" />
+      <recent name="E:\Projects\recipes\magnit-api" />
+      <recent name="E:\Projects\recipes\prices-api" />
+      <recent name="E:\Projects\recipes\products-api" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\recipes\kafka" />
       <recent name="E:\Projects\recipes-api\magnit-api\src\main\java\ru\klingenberg\magnit_api\DTO\Goods\request" />
       <recent name="E:\Projects\recipes-api\magnit-get-goods\src\main\java\ru\klingenberg\magnitgetgoods\DTO\request\Goods" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.klingenberg.products_api.controller" />
       <recent name="ru.klingenberg.resipesapi.service" />
       <recent name="ru.klingenberg.recipesapi.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.klingenberg.prices_api.dto" />
+      <recent name="ru.klingenberg.products_api.dto" />
       <recent name="ru.klingenberg.magnit_api" />
       <recent name="ru.klingenberg.magnit_api.DTO" />
       <recent name="ru.klingenberg.goods_collector.DTO" />
-      <recent name="ru.klingenberg.goods_collector.db.repository" />
-      <recent name="ru.klingenberg.magnitgetgoods" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -205,79 +293,49 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MagnitApiApplication">
-    <configuration name="GoodsCollectorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.klingenberg.goods_collector.GoodsCollectorApplication" />
-      <module name="goods-collector.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.klingenberg.goods_collector.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MagnitApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.klingenberg.magnit_api.MagnitApiApplication" />
-      <module name="magnit-api.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.klingenberg.magnit_api.schedule.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RecipeServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Docker.docker-compose.yml.kafka: Compose Deployment">
+    <configuration name="magnit-api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/recipes-api" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/magnit-api" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.klingenberg.resipesapi.service.RecipeServiceTest&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RecipeServiceTest.saveAndGetTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="products-api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/recipes-api" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/products-api" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.klingenberg.resipesapi.service.RecipeServiceTest.saveAndGetTest&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
@@ -286,19 +344,62 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.products-api: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="products-api" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.RecipesApiApplication" />
-      <item itemvalue="Application.GoodsCollectorApplication" />
-      <item itemvalue="Application.MagnitApiApplication" />
-      <item itemvalue="Gradle.RecipeServiceTest" />
-      <item itemvalue="Gradle.RecipeServiceTest.saveAndGetTest" />
+      <item itemvalue="Application.ProductsApiApplication" />
+      <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.products-api: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Gradle.magnit-api [build]" />
+      <item itemvalue="Gradle.products-api [build]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RecipeServiceTest.saveAndGetTest" />
-        <item itemvalue="Gradle.RecipeServiceTest" />
-        <item itemvalue="Application.GoodsCollectorApplication" />
-        <item itemvalue="Application.MagnitApiApplication" />
+        <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.products-api: Compose Deployment" />
+        <item itemvalue="Gradle.products-api [build]" />
+        <item itemvalue="Gradle.magnit-api [build]" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717856418718</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Full project redesign">
+      <option name="closed" value="true" />
+      <created>1721573039058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721573039058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,9 +465,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init-commit" />
     <MESSAGE value="goods-collector" />
-    <option name="LAST_COMMIT_MESSAGE" value="goods-collector" />
+    <MESSAGE value="Full project redesign" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full project redesign" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/ProductDto.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/ProductDto.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/prices-api/src/main/java/ru/klingenberg/prices_api/dto/ProductDto.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="GradleRunConfiguration">
         <watch expression="recipe.recipeProducts" />

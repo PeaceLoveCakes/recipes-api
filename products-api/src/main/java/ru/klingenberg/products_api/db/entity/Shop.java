@@ -6,15 +6,18 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Entity(name = "shop")
+@Entity
 @Getter
 @Setter
+@Table(name = "shop", uniqueConstraints =
+    @UniqueConstraint(columnNames = {"name"}))
 public class Shop {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @Column(name = "name")
     private String name;
 
     @OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)

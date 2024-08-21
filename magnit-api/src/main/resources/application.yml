@@ -1,10 +1,11 @@
-server:
-  port: 0
 spring:
   application:
     name: "magnit-api"
 
 magnit:
   url: "https://web-gateway.middle-api.magnit.ru"
+
+kafka:
+  url: "kafka:9092"
 
 cron: "0 0 12 * * ?"

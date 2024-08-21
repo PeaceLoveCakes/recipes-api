@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/magnit-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/magnit-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prices-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/prices-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/products-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/products-api.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/recipes.iml" filepath="$PROJECT_DIR$/.idea/recipes.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/recipes-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/recipes-api.main.iml" />
     </modules>

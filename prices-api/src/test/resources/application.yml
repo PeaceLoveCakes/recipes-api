@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: 'recipes-api'
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: 'create-drop'
+
+urls:
+  recipes-api: "http://localhost:8080"
+  products-api: "http://localhost:8086"

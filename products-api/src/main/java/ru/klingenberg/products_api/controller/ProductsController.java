@@ -1,5 +1,6 @@
 package ru.klingenberg.products_api.controller;
 
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -12,7 +13,7 @@ import ru.klingenberg.products_api.service.ProductService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductsController {
 
@@ -29,23 +30,23 @@ public class ProductsController {
     }
 
     @GetMapping("/{id}")
-    public Product getById(@PathVariable String id){
-        return productService.findById(id).orElse(null);
+    public ProductDto getById(@PathVariable String id){
+        return ProductDto.from(productService.findById(id).orElseThrow(EntityNotFoundException::new));
     }
 
     @GetMapping("/all")
-    public PageableResponse<Product> findAll(
+    public PageableResponse<ProductDto> findAll(
             @RequestParam(defaultValue = "0", required = false) int pageNo,
             @RequestParam(defaultValue = "36", required = false) int pageSize){
         return productService.findAll(pageNo, pageSize);
     }
 
     @GetMapping("/search")
-    public Page<Product> findByName(
+    public Page<ProductDto> searchByName(
             @RequestParam(defaultValue = "0", required = false) int pageNo,
             @RequestParam(defaultValue = "36", required = false) int pageSize,
             @RequestParam String name){
-        return productService.findByName(name, pageNo, pageSize);
+        return productService.searchByName(name, pageNo, pageSize);
     }
 
 }

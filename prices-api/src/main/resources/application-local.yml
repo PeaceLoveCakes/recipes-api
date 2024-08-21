@@ -1,0 +1,20 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: "prices-api"
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5434/prices-db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+urls:
+  recipes-api: "http://localhost:8080"
+  products-api: "http://localhost:8086"

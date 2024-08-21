@@ -1,18 +1,18 @@
 package ru.klingenberg.resipesapi.service;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-import ru.klingenberg.resipesapi.db.entity.Product;
-import ru.klingenberg.resipesapi.db.entity.Recipe;
-import ru.klingenberg.resipesapi.db.entity.RecipeProduct;
-import ru.klingenberg.resipesapi.db.entity.Step;
+import ru.klingenberg.resipesapi.db.entity.*;
+import ru.klingenberg.resipesapi.db.repository.RecipeIngredientRepository;
 import ru.klingenberg.resipesapi.db.repository.RecipeRepository;
 import ru.klingenberg.resipesapi.dto.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -20,68 +20,79 @@ import java.util.stream.Collectors;
 public class RecipeService {
 
     private final RecipeRepository recipeRepository;
-    private final ProductService productService;
+    private final IngredientService ingredientService;
+    private final RecipeIngredientRepository recipeIngredientRepository;
 
-    private RecipeDtoGet recipeDtoFrom(Recipe recipe) {
-        return new RecipeDtoGet()
+    private RecipeDto recipeDtoFrom(Recipe recipe) {
+        return new RecipeDto()
                 .setDescription(recipe.getDescription())
                 .setName(recipe.getName())
                 .setId(recipe.getId())
-                .setProducts(getProductsFrom(recipe))
+                .setIngredients(getIngredientsFrom(recipe))
                 .setSteps(recipe.getSteps().stream()
                         .map(StepDto::from)
                         .collect(Collectors.toList()));
     }
 
-    private List<ProductDto> getProductsFrom(Recipe recipe) {
-        if (recipe.getRecipeProducts() == null || recipe.getRecipeProducts().isEmpty()) return new ArrayList<>();
-        return recipe.getRecipeProducts()
-                .stream().map(recipeProduct -> {
-//                            recipeProduct.getProduct().normalizeAmount();
-                            return new ProductDto()
-                                    .setId(recipeProduct.getProduct().getId())
-                                    .setName(recipeProduct.getProduct().getName())
-//                                    .setAmount(recipeProduct.getAmount() * recipeProduct.getAmount())
-//                                    .setPrice(recipeProduct.getProduct().getPrice() * recipeProduct.getAmount())
-                                    .setMeasurementUnit(recipeProduct.getProduct().getMeasurementUnit());
-                        }
+    private List<RecipeIngredientDto> getIngredientsFrom(Recipe recipe) {
+        if (recipe.getRecipeIngredients() == null || recipe.getRecipeIngredients().isEmpty()) return new ArrayList<>();
+        return recipe.getRecipeIngredients()
+                .stream().map(recipeIngredient -> new RecipeIngredientDto()
+                                    .setIngredientId(recipeIngredient.getIngredient().getId())
+                                    .setName(recipeIngredient.getIngredient().getName())
+                        .setAmount(recipeIngredient.getAmount())
+                        .setMeasurementUnit(recipeIngredient.getMeasurementUnit())
                 ).collect(Collectors.toList());
     }
 
-    private Recipe recipeFrom(RecipeDtoPost recipeDto) {
-        Recipe recipe = new Recipe()
-                .setDescription(recipeDto.getDescription())
-                .setName(recipeDto.getName())
-                .setSteps(recipeDto.getSteps().stream()
+    private Recipe recipeFrom(RecipeDto recipeDto) {
+        Recipe recipe = recipeRepository.findById(recipeDto.getId())
+                .orElseGet(() -> new Recipe()
+                                .setDescription(recipeDto.getDescription())
+                                .setName(recipeDto.getName()));
+        recipe.setSteps(recipeDto.getSteps().stream()
                         .map(stepDto -> new Step()
+                                .setId(stepDto.getId())
                                 .setText(stepDto.getText())
-                                .setName(stepDto.getName()))
+                                .setName(stepDto.getName())
+                                .setRecipe(recipe))
+                        .collect(Collectors.toList()))
+                .setRecipeIngredients(recipeDto.getIngredients().stream()
+                        .map(recipeIngredientDto -> recipeIngredientFromDto(recipeIngredientDto, recipe))
                         .collect(Collectors.toList()));
-        recipe
-                .setRecipeProducts(recipeDto.getProductIds().stream()
-                        .map(recipeProductDto -> {
-                            Product product = productService.findById(recipeProductDto.getProductId())
-                                    .orElseThrow();
-                            return new RecipeProduct()
-                                    .setProduct(product)
-                                    .setAmount(recipeProductDto.getAmount());
-                        }).collect(Collectors.toList()));
         return recipe;
     }
 
-    public RecipeDtoGet getById(String id) {
-        return recipeDtoFrom(recipeRepository.findById(id).orElseThrow());
+    private RecipeIngredient recipeIngredientFromDto(RecipeIngredientDto recipeIngredientDto, Recipe recipe) {
+        Ingredient ingredient = ingredientService.findByIdOrName(recipeIngredientDto.getIngredientId(), recipeIngredientDto.getName())
+                .orElseGet(() -> ingredientService.save(new IngredientDto().setName(recipeIngredientDto.getName())));
+        RecipeIngredient recipeIngredient = recipeIngredientRepository
+                .findByRecipeIdAndIngredientId(recipe.getId(), ingredient.getId())
+                .orElseGet(() -> new RecipeIngredient().setIngredient(ingredient));
+        return recipeIngredient
+                .setAmount(recipeIngredientDto.getAmount())
+                .setMeasurementUnit(recipeIngredientDto.getMeasurementUnit())
+                .setRecipe(recipe);
     }
 
-    public RecipeDtoGet save(RecipeDtoPost recipeDto) {
+    public RecipeDto findById(String id) {
+        return recipeDtoFrom(recipeRepository.findById(id)
+                .orElseThrow(EntityNotFoundException::new));
+    }
+
+    public RecipeDto save(RecipeDto recipeDto) {
         return recipeDtoFrom(recipeRepository.save(recipeFrom(recipeDto)));
     }
 
-    public Page<Recipe> findAll(int pageNo, int pageSize) {
-        return recipeRepository.findAll(PageRequest.of(pageNo, pageSize));
+    public Page<RecipeDto> findAll(int pageNo, int pageSize) {
+        return recipeRepository.findAll(PageRequest.of(pageNo, pageSize)).map(this::recipeDtoFrom);
     }
 
-    public Page<Product> findByName(String name, int pageNo, int pageSize) {
-        return recipeRepository.findByNameContainingIgnoreCase(name.trim(), PageRequest.of(pageNo, pageSize));
+    public void deleteById(String id) {
+        recipeRepository.deleteById(id);
+    }
+
+    public Page<RecipeDto> searchByName(String name, int pageNo, int pageSize) {
+        return recipeRepository.findByNameContainingIgnoreCase(name, PageRequest.of(pageNo,pageSize)).map(this::recipeDtoFrom);
     }
 }

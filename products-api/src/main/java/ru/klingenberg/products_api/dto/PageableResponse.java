@@ -12,5 +12,6 @@ public class PageableResponse<T> {
     private Integer pageSize;
     private Integer totalPages;
     private Long totalElements;
+    private boolean hasNext;
     private List<T> elements;
 }

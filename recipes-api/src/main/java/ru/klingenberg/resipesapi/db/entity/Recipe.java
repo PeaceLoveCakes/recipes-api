@@ -15,12 +15,13 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @Column(nullable = false)
     private String name;
 
     private String description;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "recipe")
-    private List<RecipeProduct> recipeProducts;
+    private List<RecipeIngredient> recipeIngredients;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "recipe")
     private List<Step> steps;

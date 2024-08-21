@@ -4,8 +4,7 @@ import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import ru.klingenberg.magnit_api.DTO.PageableResponse;
-import ru.klingenberg.magnit_api.DTO.ProductDto;
+import ru.klingenberg.magnit_api.DTO.ShopProducts;
 import ru.klingenberg.magnit_api.kafka.KafkaProducer;
 import ru.klingenberg.magnit_api.service.GoodsService;
 import ru.klingenberg.magnit_api.service.ProductsService;
@@ -26,12 +25,12 @@ public class CollectGoodsSchedule {
 
     @Scheduled(cron = "${cron}")
     private void sendGoodsSchedule(){
-        PageableResponse<ProductDto> products;
+        ShopProducts products;
         int pageNo = 1;
         do {
-            products = productsService.PageableResponseFromGoodsResponse(
+            products = productsService.shopProductsFromGoodsResponse(
                     goodsService.getGoods(pageNo++, 36));
-            products.getElements().forEach(kafkaProducer::sendProduct);
+            kafkaProducer.sendProducts(products);
         } while (products.isHasMore());
     }
 

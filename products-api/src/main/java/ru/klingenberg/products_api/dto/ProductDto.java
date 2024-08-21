@@ -3,17 +3,24 @@ package ru.klingenberg.products_api.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import ru.klingenberg.products_api.db.entity.Product;
+import ru.klingenberg.products_api.db.entity.Shop;
 
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
 public class ProductDto {
 
     private String id;
+
+    private String shopName;
+
+    private String inShopId;
 
     @NotBlank(message = "name required")
     private String name;
@@ -47,11 +54,14 @@ public class ProductDto {
     }
 
     public static ProductDto from(Product product){
+        Shop shop = product.getShop() != null ? product.getShop() : new Shop();
         return new ProductDto()
+                .setShopName(shop.getName())
+                .setId(shop.getId())
                 .setId(product.getId())
                 .setName(product.getName())
-//                .setPrice(product.getPrice())
-//                .setAmount(product.getAmount())
+                .setPrice(product.getPrice())
+                .setAmount(product.getAmount())
                 .setMeasurementUnit(product.getMeasurementUnit());
     }
 

@@ -47,8 +47,8 @@ public class CategoriesService {
     public List<Integer> getDefaultCategoriesIds() {
         return getCategoriesIdsByNames(List.of(
                 "Молоко, яйцо, сыр",
-                "Фрукты, овощи",
-                "Мясо, птица",
+                "Овощи, фрукты ",
+                "Птица, мясо",
                 "Хлеб, выпечка",
                 "Бакалея, соусы",
                 "Консервы, мёд, варенье",

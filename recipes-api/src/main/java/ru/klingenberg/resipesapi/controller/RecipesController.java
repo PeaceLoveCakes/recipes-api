@@ -5,10 +5,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-import ru.klingenberg.resipesapi.db.entity.Product;
+import ru.klingenberg.resipesapi.db.entity.Ingredient;
 import ru.klingenberg.resipesapi.db.entity.Recipe;
-import ru.klingenberg.resipesapi.dto.RecipeDtoGet;
-import ru.klingenberg.resipesapi.dto.RecipeDtoPost;
+import ru.klingenberg.resipesapi.dto.RecipeDto;
 import ru.klingenberg.resipesapi.service.RecipeService;
 
 @RestController
@@ -19,8 +18,8 @@ public class RecipesController {
 
     private final RecipeService recipeService;
 
-    @PostMapping("/add")
-    public RecipeDtoGet add(@RequestBody RecipeDtoPost recipeDto){
+    @PostMapping
+    public RecipeDto save(@RequestBody RecipeDto recipeDto){
         return recipeService.save(recipeDto);
     }
 
@@ -28,22 +27,32 @@ public class RecipesController {
             summary = "Find recipe by id"
     )
     @GetMapping("/{id}")
-    public RecipeDtoGet getById(@PathVariable String id){
-        return recipeService.getById(id);
+    public RecipeDto findById(@PathVariable String id){
+        return recipeService.findById(id);
     }
 
     @GetMapping("/all")
-    public Page<Recipe> all(
+    public Page<RecipeDto> all(
             @RequestParam(defaultValue = "0", required = false) int pageNo,
             @RequestParam(defaultValue = "36", required = false) int pageSize) {
         return recipeService.findAll(pageNo, pageSize);
     }
 
     @GetMapping("/search")
-    public Page<Product> findByName(
+    public Page<RecipeDto> findByName(
             @RequestParam(defaultValue = "0", required = false) int pageNo,
             @RequestParam(defaultValue = "36", required = false) int pageSize,
             @RequestParam String name){
-        return recipeService.findByName(name, pageNo, pageSize);
+        return recipeService.searchByName(name, pageNo, pageSize);
+    }
+
+    @PutMapping
+    public RecipeDto editByIdById(@RequestBody RecipeDto recipeDto){
+        return recipeService.save(recipeDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable String id){
+        recipeService.deleteById(id);
     }
 }

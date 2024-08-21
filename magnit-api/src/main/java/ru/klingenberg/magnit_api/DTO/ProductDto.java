@@ -12,7 +12,7 @@ public class ProductDto {
 
     private String inShopId;
 
-    private String shop;
+    private String shopName;
 
     private String name;
 

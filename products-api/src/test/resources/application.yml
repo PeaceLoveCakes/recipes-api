@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: 'products-api'
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: 'create-drop'
+
+kafka:
+  url: "kafka:9092"
